@@ -4,15 +4,19 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
 	entry: './src/index.js',
 	output: {
-		filename: 'index.js'
+ 		path: path.join(__dirname, 'dist'),
+		filename: '[name].js'
 	},
 	module: {
 		rules: [
-			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader' }
+			{ test: /\.js$/, exclude: /node_modules/, use: 'babel-loader' }
 		]
 	},
 	plugins: [
-		new HtmlWebpackPlugin(),
+		new HtmlWebpackPlugin({
+      title: 'My Bolerplate',
+      template: 'src/index.html'
+    })
 	],
 	mode: 'development'
 };
