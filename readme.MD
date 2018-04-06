@@ -1,4 +1,4 @@
-# my-react-boilerplate
+# tiny-react-boilerplate
 
 tiny react boilerplate used to replace create-react-app for smaller apps.
 
