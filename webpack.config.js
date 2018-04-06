@@ -2,13 +2,10 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry:  {
-		bundle: './src/index.js',
-		vendor: [ 'lodash', 'react', 'react-dom' ],
-	},
+	entry: './src/index.js',
 	output: {
  		path: path.join(__dirname, 'dist'),
-		filename: '[name].[chunkhash].js',
+		filename: '[name].js',
 	},
 	module: {
 		rules: [
