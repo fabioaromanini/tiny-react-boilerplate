@@ -2,10 +2,13 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-	entry: './src/index.js',
+	entry:  {
+		bundle: './src/index.js',
+		vendor: [ 'lodash', 'react', 'react-dom' ],
+	},
 	output: {
  		path: path.join(__dirname, 'dist'),
-		filename: '[name].js'
+		filename: '[name].[chunkhash].js',
 	},
 	module: {
 		rules: [
@@ -13,7 +16,7 @@ module.exports = {
 		]
 	},
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx' ],
   },
 	plugins: [
 		new HtmlWebpackPlugin({
@@ -21,5 +24,5 @@ module.exports = {
       template: 'src/index.html'
     })
 	],
-	mode: 'development'
+	mode: 'development',
 };
