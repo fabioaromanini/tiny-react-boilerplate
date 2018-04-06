@@ -6,8 +6,7 @@ tiny react boilerplate used to replace create-react-app for smaller apps.
 * npm install
 * npm run start
 
-## TODO:
-* 0.9.1 - branching system
+## Upcoming releases:
 * 0.9.2 - render react app on a given div
 * 0.9.3 - minify
 * 0.9.4 - css, json and images loader
@@ -15,4 +14,8 @@ tiny react boilerplate used to replace create-react-app for smaller apps.
 * 0.9.6 - enzyme
 * 0.9.7 - add minimum coverage to build
 * 0.9.8 - production and development variables
-* 0.9.9 - after all that, update the environment!
+* 1.0.0 - update the environment to the latest versions available on npm
+
+## History:
+* 0.9.1
+Project became public, with a defined roadmap
